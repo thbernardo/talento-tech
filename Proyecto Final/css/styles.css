@@ -1,0 +1,68 @@
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.added-tooltip {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #198754;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+    z-index: 1050;
+}
+
+.added-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card {
+    background-color: #343a40;
+    border-color: #495057;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card-text.text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-mode .offcanvas {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode .offcanvas-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
